@@ -1,0 +1,20 @@
+{
+  "name": "ng-chatbot-angular",
+  "version": "16.3.7",
+  "author": "Soufiane Asrih",
+  "license": "MIT",
+  "homepage": "https://github.com/Asrih7/",
+
+  "peerDependencies": {
+    "@angular/common": "^16.2.0",
+    "@angular/core": "^16.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Asrih7/ng-chatbot-angular"
+  },
+  "sideEffects": false
+}

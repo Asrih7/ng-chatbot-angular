@@ -64,22 +64,16 @@ export class NgChatbotAngularComponent implements OnInit {
   }
 
   scrollToBottom() {
-    try {
-      setTimeout(() => {
-        if (this.myScrollContainer) {
-          this.myScrollContainer.nativeElement.scrollTop =
-            32 + this.myScrollContainer.nativeElement.scrollHeight;
-          this.myScrollContainer.nativeElement.scroll({
-            top: this.myScrollContainer.nativeElement.scrollHeight,
-            left: 0,
-            behavior: 'smooth',
-          });
-        }
-      }, 100);
-    } catch (err) {}
+    if (this.myScrollContainer) {
+      this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
+    }
   }
+  
 
   public onMessage(date: any): void {
     this.onMessageInput.emit(date.trim());
+  }
+  ngAfterViewChecked() {
+    this.scrollToBottom();
   }
 }
